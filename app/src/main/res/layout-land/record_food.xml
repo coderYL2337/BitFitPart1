@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/foodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="38dp"
+        android:text="Food:"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/caloriesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Calories:"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/foodLabel"
+        app:layout_constraintTop_toBottomOf="@+id/foodLabel" />
+
+
+    <EditText
+        android:id="@+id/foodInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="bread"
+        android:inputType="text"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/foodLabel"
+        app:layout_constraintEnd_toStartOf="@id/dailyPhotoImage"
+        app:layout_constraintStart_toEndOf="@+id/foodLabel" />
+
+    <EditText
+        android:id="@+id/caloriesInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="80"
+        android:inputType="number"
+        android:textSize="28sp"
+        android:paddingStart="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesLabel"
+        app:layout_constraintEnd_toEndOf="@+id/foodInput"
+        app:layout_constraintStart_toEndOf="@+id/caloriesLabel" />
+
+    <Button
+        android:id="@+id/recordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="RECORD THIS FOOD"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caloriesInput" />
+
+    <ImageView
+        android:id="@+id/dailyPhotoImage"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/caloriesInput"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/photoLabel"
+        app:srcCompat="@drawable/placeholder_image" />
+
+    <TextView
+        android:id="@+id/photoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Food of the Day"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dailyPhotoImage"
+        app:layout_constraintStart_toStartOf="@+id/dailyPhotoImage"
+        app:layout_constraintTop_toBottomOf="@+id/dailyPhotoImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
